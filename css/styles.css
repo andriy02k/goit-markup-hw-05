@@ -720,15 +720,12 @@ fill: currentColor;
 .modal-form {}
 
 .modal-form-field {
-    /* position: relative;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: var(--icon-cl);
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-
-    margin-bottom: 4px; */
 }
 
 .modal-form-input-container {
@@ -831,13 +828,13 @@ margin-bottom: 4px;
     user-select: none;
 }
 
-.modal-form-checkbox:checked .modal-form-custom-checkbox {
+.modal-form-checkbox:checked + .modal-form-agreement .modal-form-custom-checkbox {
     background-color: var(--pressed-state);
     border: none;
     fill: var(--light);
 }
 
-.modal-form-checkbox:checked + .modal-form-custom-checkbox .modal-form-checkbox-icon {
+.modal-form-checkbox:checked + .modal-form-agreement .modal-form-custom-checkbox .modal-form-checkbox-icon{
     opacity: 1;
 }
 
