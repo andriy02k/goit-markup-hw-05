@@ -112,6 +112,8 @@ ul,ol {
     border-radius: 4px;
     padding: 12px 24px;
 
+    outline: transparent;
+
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -124,6 +126,9 @@ ul,ol {
     gap: 24px;
     justify-content: center;
     margin-bottom: 72px;
+
+    outline: transparent;
+    cursor: pointer;
 }
 
 .btn:hover,
@@ -131,11 +136,6 @@ ul,ol {
     color: var(--white-background);
     background-color: var(--pressed-state);
     border: 1px solid transparent;
-    /* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 .hero-btn {
@@ -146,6 +146,7 @@ ul,ol {
     line-height: 1.5;
     color: var(--white-background);
     background-color: var(--primary-brand);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     letter-spacing: 0.04em;
 
     min-width: 169px;
@@ -156,12 +157,15 @@ ul,ol {
     padding: 15px 31px;
     border: none;
     border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    outline: transparent;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
     background-color: var(--pressed-state);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .logo {
@@ -386,7 +390,6 @@ letter-spacing: 0.02em;
     align-items: baseline;
     justify-content: flex-start;
     gap: 120px;
-    margin-right: 120px;
 }
 
 .footer-network {
@@ -404,11 +407,11 @@ letter-spacing: 0.02em;
 }
 
 .footer-part {
-    margin-right: 120px;
+    /* margin-right: 120px; */
 }
 
 .footer-text {
-    max-width: 264px
+    min-width: 264px;
 }
 
 .section-portfolio {
@@ -650,6 +653,7 @@ fill: currentColor;
 
     width: 408px;
     min-height: 584px;
+    padding: 0 24px;
 
     border-radius: 4px;
     background: #fcfcfc;
@@ -683,6 +687,8 @@ fill: currentColor;
     justify-content: center;
     padding: 0;
 
+    outline: transparent;
+
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -696,3 +702,245 @@ fill: currentColor;
 .modal-btn:focus .modal-icon {
     fill: var(--white-background);
 }
+
+.modal-caption {
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    margin: 72px auto 16px auto ;
+    padding: 0 0;
+    
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+}
+
+.modal-form {}
+
+.modal-form-field {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-form-label {
+    color: var(--icon-cl);
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: -0.28px;
+
+    display: block;
+    margin-bottom: 4px;
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    padding: 11px 38px;
+    
+    font-size: 24px;
+    
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    outline: transparent;
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+    border: 1px solid var(--primary-brand);
+}
+
+.modal-form-input:focus+.modal-form-icon {
+    fill: var(--primary-brand);
+}
+
+.modal-form-comment {
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+
+    resize: none;
+
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    outline: transparent;
+
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-comment:focus {
+    border: 1px solid var(--primary-brand);
+}
+
+.modal-form-icon {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-agreement {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-form-checkbox:checked + .modal-form-custom-checkbox {
+    border-color: var(--primary-brand);
+    background-color: var(--primary-brand);
+}
+
+.modal-form-checkbox:checked + .modal-form-custom-checkbox .modal-form-checkbox-icon {
+    opacity: 1;
+}
+
+.modal-form-custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-agreement-desc {
+    color: var(--icon-cl);
+    font-size: 12px;
+    user-select: none;
+}
+
+.modal-form-link {
+    color: var(--primary-brand);
+}
+
+.modal-form-checkbox-icon {
+    fill: var(--light);
+    opacity: 0;
+}
+
+.btn-form {
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--white-background);
+    background-color: var(--primary-brand);
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    
+    min-width: 169px;
+    min-height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 15px 31px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    outline: transparent;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+    background-color: var(--pressed-state);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.icon-send {
+    fill: var(--white-background);
+}
+
+.footer-form {
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.subscribe {
+/* display: inline-block; */
+color: var(--white-background);
+font-weight: 500;
+margin-bottom: 16px;
+}
+
+.footer-form-input {
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    
+    color: var(--white-background);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    
+    background-color: var(--dark);
+    border-radius: 4px;
+    border: 1px solid var(--white-background);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    outline: transparent;
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-input:focus,
+.footer-form-input:hover {
+border-color: var(--primary-brand);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.btn-footer {
+    color: var(--white-background);
+    text-align: center;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    border-radius: 4px;
+    border: 1px solid var(--primary-brand);
+    background: var(--primary-brand);
+    outline: transparent;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-footer:hover,
+.btn-footer:focus {
+    background-color: var(--pressed-state);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-color: var(--pressed-state);
+}
+
+.icon-send {}
